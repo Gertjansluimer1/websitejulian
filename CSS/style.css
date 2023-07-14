@@ -5,10 +5,10 @@
     /*--=================== COLOR ===================--*/
     --accent-color: #fba100;
     --accent-color-alt: #022f46;
-    --body-color: #f5f5f5;
+    --body-color: #f0eeed;
     --container-color: #202023;
     --text-color: #202023;
-    --button-color: #95ca25;
+    --button-color: #228de6;
 
     /*--=================== FONT ===================--*/
     --h1-font-size: 2rem;
@@ -45,8 +45,35 @@ h1, h2, p, a{
     color: var(--text-color);
 }
 
+h1, h2{
+    font-weight: 600;
+}
 
-/*--============================================--*/
+p{
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+/*--============================================================--*/
+
+
+
+
+/*--=================== REUSABLE CSS CLASSES ===================--*/
+.section{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 1.3rem;
+}
+
+.section_title{
+    color: var(--accent-color);
+    margin-bottom: 1.1rem;
+}
+/*--============================================================--*/
 
 
 
@@ -181,56 +208,146 @@ header{
 
 
 /*--=================== OPEN MENU ===================--*/
-.menu_button_open span{
-    background-color: #fff;
+@media screen and (max-width: 1022px) {
+    .menu_button_open span{
+        background-color: #fff;
+    }
+    
+    .menu_button_open .line-1{
+        transform: translate(0, 0) rotate(135deg);
+    }
+    
+    .menu_button_open .line-2{
+        width: 0;
+    }
+    
+    .menu_button_open .line-3{
+        transform: translate(0, 0) rotate(-135deg);
+    }
+    
+    .header_open{
+        background-color: var(--accent-color);
+    }
+    
+    .open_menu{
+        top: 0;
+        transition-delay: .0s;
+    }
+    
+    .open_nav_list{
+        opacity: 1;
+        transition: opacity .7s;
+    }
+    
+    .open_nav_list li{
+        transform: translateY(-5rem);
+    }
+    
+    .logo_open h1{
+        color: #fff;
+    }
+    
+    .logo_open h1 span{
+        color: #fff;
+    }
+    
+    .logo_icon_open{
+        background-color: #fff;
+    }
+    
+    .logo_icon_open span{
+        color: var(--accent-color);
+    }
+}
+/*--======================== END OF HEADER ========================--*/
+
+
+
+
+/*--======================== FRONT PAGE ========================--*/
+.front_page{
+    padding: 0;
+    background-image: url(background_img_2.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: end;
 }
 
-.menu_button_open .line-1{
-    transform: translate(0, 0) rotate(135deg);
+.dark{
+    padding: 8rem 1rem 4rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.menu_button_open .line-2{
-    width: 0;
-}
-
-.menu_button_open .line-3{
-    transform: translate(0, 0) rotate(-135deg);
-}
-
-
-
-
-.header_open{
-    background-color: var(--accent-color);
-}
-
-.open_menu{
-    top: 0;
-    transition-delay: .0s;
-}
-
-.open_nav_list{
-    opacity: 1;
-    transition: opacity .7s;
-}
-
-.open_nav_list li{
-    transform: translateY(-5rem);
-}
-
-.logo_open h1{
+.dark h1, h2{
+    justify-self: end;
+    width: 100%;
     color: #fff;
+    z-index: 10;
 }
 
-.logo_open h1 span{
+.dark h1{
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 4.5rem;
+}
+
+.dark h2{
+    font-weight: 300;
+}
+
+.dark p{
     color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
 }
 
-.logo_icon_open{
-    background-color: #fff;
+.front_page_btn_container{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.logo_icon_open span{
+.front_page_btn{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .4rem 1.1rem;
     color: var(--accent-color);
+    background-color: #fff;
+    border-radius: 500px;
 }
-/*--=================================================--*/
+/*--============================================================--*/
+
+
+
+/*--======================== FRONT PAGE ========================--*/
+.diensten_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+}
+
+.dienst_box{
+    background-color: #fff;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.dienst_box h2{
+    color: var(--container-color);
+    font-size: 1.2rem;
+}
+
+.dienst_box p{
+    margin-bottom: 2rem;
+}
+
+.btn_diensten{
+    color: #fff;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    background-color: var(--button-color);
+    border-radius: 500px;
+}
+
+/*--============================================================--*/
