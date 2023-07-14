@@ -38,6 +38,7 @@ ul {
 
 a{
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1, h2, p, a{
@@ -69,10 +70,7 @@ header{
     margin-left: 1rem;
     display: flex;
     align-items: center;
-}
-
-.logo_box:focus{
-    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .logo_icon{
@@ -155,11 +153,7 @@ header{
     justify-content: center;
     flex-direction: column;
     margin-right: 2rem;
-}
-
-.menu_button:focus{
-    outline: none;
-    outline: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .menu_button span{
