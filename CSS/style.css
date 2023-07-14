@@ -4,11 +4,11 @@
 :root {    
     /*--=================== COLOR ===================--*/
     --accent-color: #fba100;
-    --accent-color-alt: #022f46;
+    --accent-color-alt: #479acc;
     --body-color: #f0eeed;
     --container-color: #202023;
     --text-color: #202023;
-    --button-color: #228de6;
+    --button-color: #308fdc;
 
     /*--=================== FONT ===================--*/
     --h1-font-size: 2rem;
@@ -72,6 +72,13 @@ p{
 .section_title{
     color: var(--accent-color);
     margin-bottom: 1.1rem;
+    font-size: 1.7rem;
+}
+
+.section_title_blauw{
+    color: #fff;
+    margin-bottom: 1.1rem;
+    font-size: 1.7rem;
 }
 /*--============================================================--*/
 
@@ -277,6 +284,13 @@ header{
     padding: 8rem 1rem 4rem;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+}
+
+.front_page_content{
+    width: 100%;
+    max-width: 1050px;
 }
 
 .dark h1, h2{
@@ -310,7 +324,6 @@ header{
 }
 
 .front_page_btn{
-    font-size: 1rem;
     font-weight: 600;
     padding: .4rem 1.1rem;
     color: var(--accent-color);
@@ -321,16 +334,18 @@ header{
 
 
 
-/*--======================== FRONT PAGE ========================--*/
+/*--======================== DIENSTEN ========================--*/
 .diensten_content{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1.3rem;
 }
 
 .dienst_box{
     background-color: #fff;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 1.8rem 1rem;
+    max-width: 400px;
 }
 
 .dienst_box h2{
@@ -345,9 +360,44 @@ header{
 .btn_diensten{
     color: #fff;
     font-weight: 600;
-    padding: .5rem 1rem;
+    padding: .4rem 1.1rem;
     background-color: var(--button-color);
     border-radius: 500px;
 }
-
 /*--============================================================--*/
+
+
+
+
+/*--======================== IDEAAL VOOR ========================--*/
+.ideaal_voor{
+    background-color: var(--accent-color-alt);
+    text-align: center;
+}
+
+.ideaal_content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.ideaal_box{
+    color: #fff;
+    max-width: 400px;
+}
+
+.ideaal_box h2{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.ideaal_box p{
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.icon_mobiel{
+    transform: scale(.8);
+}
+/*--=============================================================--*/
