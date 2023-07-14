@@ -130,11 +130,14 @@ header{
     transition: opacity .4s;
 }
 
+.nav_list li{
+    transition: transform .5s;
+}
+
 .nav_list a{
     color: #fff;
     font-size: 1.5rem;
 }
-
 
 
 
@@ -150,9 +153,14 @@ header{
     margin-right: 2rem;
 }
 
+.menu_button:focus{
+    outline: none;
+    outline: 0;
+}
+
 .menu_button span{
     background-color: var(--accent-color);
-    width: 2rem;
+    width: 1.7rem;
     height: 3px;
     display: block;
     transition: .2s;
@@ -160,7 +168,7 @@ header{
 }
 
 .menu_button .line-1{
-    transform: translate(0, -10px);
+    transform: translate(0, -8px);
 }
 
 .menu_button .line-2{
@@ -168,7 +176,7 @@ header{
 }
 
 .menu_button .line-3{
-    transform: translate(0, 10px);
+    transform: translate(0, 8px);
 }
 
 
@@ -206,6 +214,10 @@ header{
 .open_nav_list{
     opacity: 1;
     transition: opacity .7s;
+}
+
+.open_nav_list li{
+    transform: translateY(-5rem);
 }
 
 .logo_open h1{
