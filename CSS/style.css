@@ -71,6 +71,10 @@ header{
     align-items: center;
 }
 
+.logo_box:focus{
+    box-shadow: none;
+}
+
 .logo_icon{
     background-color: #fba100;
     border-radius: 50% 50% 50% 5%;
