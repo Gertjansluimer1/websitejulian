@@ -7,6 +7,7 @@ const logo_text1 = document.getElementById("logo_text1");
 const logo_text2 = document.getElementById("logo_text2");
 const logo_icon = document.getElementById("logo_icon");
 const nav_list = document.getElementById("nav_list");
+const afspraakmenuknop = document.getElementById("afspraakmenuknop");
 
 function menuToggle(){
     header.classList.toggle("header_open");
@@ -15,6 +16,7 @@ function menuToggle(){
     logo_icon.classList.toggle("logo_icon_open");
     menu_button.classList.toggle("menu_button_open");
     nav_list.classList.toggle("open_nav_list");
+    afspraakmenuknop.classList.toggle("open_afspraakmenuknop");
 }
 
 menu_button.onclick = menuToggle;
