@@ -519,11 +519,6 @@ header{
     display: none;
 }
 
-.carousel.dragging{
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-}
-
 .carousel.dragging .card{
     cursor: grab;
     user-select: none;
