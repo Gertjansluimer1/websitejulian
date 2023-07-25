@@ -524,6 +524,10 @@ header{
     user-select: none;
 }
 
+.carousel.no_transition{
+    scroll-behavior: auto;
+}
+
 .card{
     display: flex;
     align-items: center;
