@@ -50,19 +50,8 @@ const touchStop = () => {
 
 setInterval(autoSwipe, 100)
 
-const lbl1 = document.getElementById("lbl1");
-const lbl2 = document.getElementById("lbl2");
-const lbl3 = document.getElementById("lbl3");
-const lbl4 = document.getElementById("lbl4");
-const lbl5 = document.getElementById("lbl5");
-
 function autoSwipe() {
     timer++;
-    lbl5.innerHTML = Math.round(lijst.offsetWidth / item.offsetWidth);
-    lbl1.innerHTML = Math.round(lijst.scrollLeft);
-    lbl2.innerHTML = Math.round(lijst.scrollWidth);
-    lbl3.innerHTML = Math.round(lijst.offsetWidth);
-    lbl4.innerHTML = lijst.scrollWidth - lijst.offsetWidth;
     if(aanuit && timer > 30) {
         timer = 0;
         lijst.scrollLeft = lijst.scrollLeft + swipeWith;

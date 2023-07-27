@@ -631,6 +631,95 @@ header{
 
 
 
+
+/*--======================== FOOTER ========================--*/
+.footer{
+    background-color: var(--accent-color);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_content{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_box_footer{
+    width: min-content;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logo_icon_footer{
+    background-color: #fff;
+    border-radius: 50% 50% 50% 5%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .4rem;
+    transition: background-color .3s;
+}
+
+.logo_icon_footer span{
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-right: .1rem;
+    transition: color .3s;
+}
+
+.logo_box_footer h1{
+    font-weight: 800;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color .3s;
+}
+
+.logo_box_footer h1 span{
+    font-weight: 300;
+    color: #fff;
+    margin-top: -1rem;
+    transition: color .3s;
+}
+
+.footer_1 p, .footer_2 p, .footer_3 p{
+    text-align: center;
+    color: #fff;
+    padding: .3rem;
+    font-size: 1rem;
+}
+
+.footer_1 h1, .footer_2 h1, .footer_3 h1{
+    text-align: center;
+    color: #fff;
+    padding: .3rem;
+}
+
+.footer_1, .footer_2, .footer_3{
+    max-width: 350px;
+}
+
+.lijn{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 2rem 0;
+}
+/*--=========================================================--*/
+
+
+
+
 /*--======================== BEL NU ========================--*/
 .bel_nu{
     position: fixed;
@@ -852,6 +941,16 @@ header{
 
     .contact_button:hover{
         transform: translateY(-.5rem);
+    }
+
+    /*--======================== FOOTER ========================--*/
+    .footer_content{
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .lijn{
+        display: none;
     }
 
     /*--======================== BEL NU ========================--*/
