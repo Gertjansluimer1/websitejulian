@@ -715,6 +715,12 @@ header{
     background-color: #fff;
     margin: 2rem 0;
 }
+
+.Copyright{
+    color: #fff;
+    margin-top: 4rem;
+    text-align: center;
+}
 /*--=========================================================--*/
 
 
@@ -945,8 +951,9 @@ header{
 
     /*--======================== FOOTER ========================--*/
     .footer_content{
+        width: 1050px;
+        justify-content: space-between;
         flex-direction: row;
-        gap: 5rem;
     }
 
     .lijn{
