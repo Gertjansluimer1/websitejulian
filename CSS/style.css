@@ -511,6 +511,7 @@ header{
     padding: 2rem 0;
     width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc(100% / 1);
@@ -532,6 +533,7 @@ header{
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
+    height: 6rem;
 }
 
 .dragging{
@@ -545,6 +547,7 @@ header{
 }
 
 .item img{
+    height: fit-content;
     width: 80%;
 }
 
