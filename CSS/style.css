@@ -500,51 +500,54 @@ header{
 .merken{
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: -1rem 0 4rem 0;
+    padding: 1.3rem 1.3rem 5rem 1.3rem;
 }
 
-.wrapper{
+.merken_lijst{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem 0;
     width: 100%;
-}
-
-.carousel{
-    display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% / 1);
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 
-.carousel::-webkit-scrollbar{
+.merken_lijst::-webkit-scrollbar{
     display: none;
 }
 
-.carousel.dragging .card{
+.no_transition{
+    scroll-behavior: auto;
+}
+
+.item{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+.dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.dragging .item{
     cursor: grab;
     user-select: none;
 }
 
-.carousel.no_transition{
-    scroll-behavior: auto;
+.item img{
+    width: 80%;
 }
 
-.card{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    scroll-snap-align: start;
-}
-
-.img_bx{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
-
-.img_bx img{
-    width: 80vw;
-}
 /*--=========================================================--*/
 
 
@@ -741,6 +744,12 @@ header{
     17%{transform: rotate(0deg);}
 }
 
+@media screen and (min-width: 700px) {
+    .merken_lijst{
+        grid-auto-columns: calc(100% / 2);
+    }
+}
+
 @media screen and (min-width: 1023px) {
     /*--======================== HEADER ========================--*/
     header{
@@ -815,6 +824,11 @@ header{
     .ideaal_box{
         max-width: 360px;
         padding: 1rem;
+    }
+
+    .merken_lijst{
+        grid-auto-columns: calc(100% / 3);
+        max-width: 1120px;
     }
 
     /*--======================== IDEAAL VOOR ========================--*/
