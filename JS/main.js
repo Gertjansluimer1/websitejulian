@@ -9,6 +9,12 @@ const logo_icon = document.getElementById("logo_icon");
 const nav_list = document.getElementById("nav_list");
 const afspraakmenuknop = document.getElementById("afspraakmenuknop");
 
+
+const link1 = document.getElementById("link1");
+const link2 = document.getElementById("link2");
+const link3 = document.getElementById("link3");
+const link4 = document.getElementById("link4");
+
 function menuToggle(){
     header.classList.toggle("header_open");
     menu.classList.toggle("open_menu");
@@ -20,6 +26,12 @@ function menuToggle(){
 }
 
 menu_button.onclick = menuToggle;
+
+afspraakmenuknop.onclick = menuToggle;
+link1.onclick = menuToggle;
+link2.onclick = menuToggle;
+link3.onclick = menuToggle;
+link4.onclick = menuToggle;
 
 
 
