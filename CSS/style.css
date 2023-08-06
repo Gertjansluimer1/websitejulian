@@ -73,6 +73,7 @@ p{
     color: var(--accent-color);
     margin-bottom: 1.1rem;
     font-size: 1.7rem;
+    text-align: center;
 }
 
 .section_title_blauw{
@@ -89,6 +90,70 @@ p{
 
 
 
+/*--=================== COOKIE ===================--*/
+.cookie_container{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    backdrop-filter: blur(10px);
+    transition: backdrop-filter .5s;
+}
+
+.cookie_container_weg{
+    backdrop-filter: blur(0px);
+}
+
+.cookie_container_weg2{
+    display: none;
+}
+
+.cookie{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 80%;
+    height: fit-content;
+    padding: 1rem;
+    box-shadow: 0px 0px 20px #00000051;
+    transition: transform .5s, opacity .5s;
+    max-width: 600px;
+    opacity: 1;
+}
+
+.cookie_weg{
+    transform: translateY(200%);
+    opacity: 0;
+}
+
+.cookie p{
+    color: var(--container-color);
+    text-align: center;
+}
+
+.cookie_btn_container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn_cookie{
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn1{
+    background-color: #88e12f;
+}
+/*--==============================================--*/
+
+
+
+
 /*--=================== HEADER ===================--*/
 header{
     background-color: #fff;
@@ -101,6 +166,12 @@ header{
     transition: background-color .3s;
     z-index: 100;
     box-shadow: 0px 0px 20px #00000026;
+    transition: top .2s;
+    top: 0;
+}
+
+.hide_header{
+    top: -5rem;
 }
 
 .header_content{
@@ -185,6 +256,13 @@ header{
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.nav_list p{
+    color: #fff;
+    font-size: 1.5rem;
+    user-select: none;
+    letter-spacing: 0;
 }
 
 .active{
@@ -391,21 +469,145 @@ header{
     margin-left: .5rem;
     transition: transform .2s, background-color .2s, color.2s;
 }
+
+.desktop{
+    display: none;
+}
+/*--============================================================--*/
+
+
+
+/*--======================== TARIEVEN ========================--*/
+.prijs_content{
+    width: 100%;
+    max-width: 1120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.prijs_box{
+    flex: 1;
+    background-image: linear-gradient(170deg, #f2faff, #cae2f1 );
+    height: fit-content;
+    border-radius: 10px;
+    border: 2px solid var(--accent-color-alt);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 350px;
+}
+
+.section_title_prijs{
+    padding-top: 1rem;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.prijzen{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.prijzen div{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.prijzen p{
+    text-align: center;
+    margin: -.5rem;
+}
+
+.prijzen span{
+    height: 2px;
+    background-color: var(--accent-color-alt);
+    width: 100%;
+}
+
+.prijzen h2{
+    color: var(--accent-color-alt);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.prijzen small{
+    padding-right: .2rem;
+}
+
+.prijs_afspraak{
+    height: 5rem;
+    width: 80%;
+    background-color: var(--accent-color-alt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 500px;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 1.3rem;
+    transition: background-color .3s;
+}
+
+.prijs_text{
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.prijs_text div{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.prijs_text i{
+    font-size: 1.5rem;
+    color: var(--accent-color-alt);
+}
+
+.prijs_text p{
+    font-size: 1rem;
+}
+
+.prijs_text h2{
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    color: var(--text-color);
+}
+
+
 /*--============================================================--*/
 
 
 
 /*--======================== WELKOM ========================--*/
 .welkom{
-    background-color: #fff;
+    padding-bottom: 5;
 }
 
 .welkom_container{
     width: 100%;
     max-width: 1120px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .welkom_links{
@@ -418,9 +620,54 @@ header{
 
 .welkom_links p{
     font-size: .9rem;
-    width: 80%;
-    text-align: center;
 }
+
+.welkom_title{
+    text-align: start;
+    width: 100%;
+}
+
+.welkom_btn{
+    background-color: var(--accent-color);
+    border-radius: 200px;
+    height: 2.5rem;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    margin-top: .5rem;
+    transition: transform .2s;
+}
+
+.welkom_btn i{
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: var(--accent-color);
+    border-radius: 200px;
+    margin-left: .5rem;
+    transition: transform .2s;
+}
+
+.welkom_rechts2{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welkom_rechts2 img{
+    border-radius: 0 80px 0 80px;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 1rem;
+}
+
+
+
+
+
 
 .welkom_rechts{
     flex: 1;
@@ -428,12 +675,12 @@ header{
     justify-content: center;
     flex-direction: column;    
     display: none;
-    overflow: hidden;
+    transform: translateX(1rem);
 }
 
 .welkom_rechts h1{
     font-size: 1.5rem;
-    padding-bottom: .7rem;
+    padding-bottom: -2rem;
     color: #fff;
 }
 
@@ -454,13 +701,13 @@ header{
 .rechts_content{
     z-index: 10;
     scale: 1.15;
-    transform: translateX(5rem);
+    transform: translateX(.5rem);
 }
 
 .welkom_rechts svg{
     position: absolute;
-    scale: .65;
-    transform: translateX(7rem) translateY(1rem);
+    scale: .45;
+    transform: translateX(0rem) translateY(2rem);
     width: 1050px;
     margin: -5rem;
     opacity: .8;
@@ -471,6 +718,10 @@ header{
 
 
 /*--======================== DIENSTEN ========================--*/
+.diensten{
+    padding-top: 2rem;
+}
+
 .diensten_content{
     display: flex;
     justify-content: center;
@@ -482,7 +733,6 @@ header{
 .dienst_box{
     background-color: #fff;
     padding: 1rem 1rem 1.4rem 1rem;
-    max-width: 380px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -504,11 +754,6 @@ header{
     font-size: .9rem
 }
 
-.btn_container{
-    justify-self: ;
-
-}
-
 .btn_diensten{
     align-self: baseline;
     color: #fff;
@@ -525,7 +770,7 @@ header{
     background-position: center;
     background-size: 120%;
     border-radius: 8px;
-    transition: background-size .2s;
+    transition: background-size 1s;
 }
 
 .foto1{
@@ -550,6 +795,16 @@ header{
 
 .foto6{
     background-image: url("printers.jpg");
+}
+
+.diensten_gap{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.diensten2{
+    padding-top: 0;
 }
 /*--============================================================--*/
 
@@ -692,9 +947,34 @@ header{
     user-select: none;
 }
 
+.item a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .item img{
-    width: 100%;
+    width: 90%;
     max-width: 300px;
+}
+
+/*--=========================================================--*/
+
+
+
+
+/*--======================== REVIEUWS ========================--*/
+.section_revieuws{
+    padding-bottom: 0;
+}
+
+.reviews{
+    width: 100%;
+    max-width: 1120px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 0;
 }
 /*--=========================================================--*/
 
@@ -706,7 +986,7 @@ header{
     width: 100%;
     max-width: 1120px;
     background-color: #fff;
-    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    padding: 1rem;
     border-radius: 10px;
 }
 
@@ -724,6 +1004,10 @@ header{
     color: var(--accent-color-alt);
 }
 
+.contacth2{
+    margin-bottom: 1rem;
+}
+
 .contact_form{
     width: 100%;
     display: flex;
@@ -731,7 +1015,6 @@ header{
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 2.5rem;
 }
 
 .contact_group{
@@ -777,8 +1060,27 @@ header{
     border: none;
     cursor: pointer;
     transition: transform .2s;
+    margin-bottom: 5rem;
 }
 
+.locatie{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.flex{
+    padding-right: 1rem;
+}
+
+.locatie_frame{
+    margin-top: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    height: 25rem;
+    margin-bottom: -.4rem;
+}
 /*--=========================================================--*/
 
 
@@ -858,6 +1160,7 @@ header{
 
 .footer_1, .footer_2, .footer_3{
     max-width: 350px;
+    flex: 1;
 }
 
 .lijn{
@@ -872,6 +1175,40 @@ header{
     margin-top: 4rem;
     text-align: center;
 }
+
+
+/*--======================== HULP OP AFSTAND ========================--*/
+.hulp-op-afstand_h1{
+    margin-bottom: 2rem;
+}
+
+.download{
+    height: 7rem;
+    width: 20rem;
+    background-image: linear-gradient(#ffd182, #fba100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.download i{
+    padding-left: .4rem;
+}
+
+.download_text{
+    font-size: 1rem;
+}
+
+.download:hover{
+    transform: translateY(-.25rem);
+}
+/*--=========================================================--*/
 
 
 /*--======================== PLASJE ========================--*/
@@ -1022,12 +1359,50 @@ header{
     .merken_lijst{
         grid-auto-columns: calc(100% / 2);
     }
+
+    .dienst_box{
+        max-width: 300px;
+    }
+
+    .contact_container{
+        padding: 1.5rem;
+    }
+
+    .welkom_container{
+        padding: 1.5rem;
+    }
+
+    .reviews{
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .prijs_content{
+        flex-direction: row;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .locatie{
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .flex{
+        max-width: 300px;
+    }
 }
 
 @media screen and (min-width: 1023px) {
+
     /*--======================== HEADER ========================--*/
     header{
         height: 7rem;
+    }
+
+    .hide_header{
+        top: -7rem;
     }
 
     .logo_icon{
@@ -1079,6 +1454,13 @@ header{
         display: grid;
     }
 
+    .nav_list p{
+        color: var(--accent-color);
+        font-size: 1rem;
+        font-weight: 600;
+        display: grid;
+    }
+
     .nav_list a:hover .link_line{
         width: 100%;
     }
@@ -1099,7 +1481,10 @@ header{
 
     .front_page{
         box-shadow: 0px 0px 30px #0000008c;
-        height: 80vh;
+    }
+
+    .front_page_1{
+        transform: translateX(2.5rem);
     }
 
     .front_page_content{
@@ -1120,12 +1505,29 @@ header{
 
 
     /*--======================== WELKOM ========================--*/
+    .prijs_afspraak:hover{
+        background-color: var(--accent-color);
+    }
+
     .welkom_rechts{
         display: flex;
     }
 
     .welkom_container{
         flex-direction: row;
+    }
+
+    .welkom_rechts2 img{
+        padding: 1rem 0rem 1rem 0;
+        margin-top: 0;
+    }
+    
+    .welkom_links p{
+        padding-right: 2rem;
+    }
+
+    .welkom_btn:hover i{
+        transform: translateX(.45rem);
     }
 
     /*--======================== DIENSTEN ========================--*/
@@ -1155,6 +1557,10 @@ header{
         animation-iteration-count: infinite;
     }
 
+    .switch{
+        order: 1;
+        padding-left: 2rem;
+    }
     /*--======================== CONTACT ========================--*/
     .contact_group{
         flex-direction: row;
@@ -1190,9 +1596,19 @@ header{
     }
 }
 
+@media screen and (min-width: 1194px) {
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: inline;
+    }
+}
+
 @media screen and (min-width: 1240px) {
     .merken i{
-    display: block;
+        display: block;
     }
 }
 

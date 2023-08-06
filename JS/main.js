@@ -23,6 +23,7 @@ function menuToggle(){
     menu_button.classList.toggle("menu_button_open");
     nav_list.classList.toggle("open_nav_list");
     afspraakmenuknop.classList.toggle("open_afspraakmenuknop");
+    timer = 0;
 }
 
 menu_button.onclick = menuToggle;
@@ -34,6 +35,38 @@ link3.onclick = menuToggle;
 link4.onclick = menuToggle;
 
 
+const cookie_container = document.getElementById("cookie_container");
+const cookie = document.getElementById("cookie");
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+
+function cookieToggle() {
+    cookie.classList.toggle("cookie_weg");
+    cookie_container.classList.toggle("cookie_container_weg");
+    setTimeout(gone, 500);
+}
+
+function gone() {
+    cookie_container.classList.toggle("cookie_container_weg2");
+}
+
+btn1.onclick = cookieToggle;
+btn2.onclick = cookieToggle;
+
+
+
+/*=============== SHOW HEADER ===============*/ 
+var lastScrollTop = 0;
+window.addEventListener("scroll", function(){
+    var scrollTop = this.window.scrollY || this.document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop && scrollTop > 80) {
+        header.classList.add('hide_header');
+    }
+    else {
+        header.classList.remove('hide_header');
+    }
+    lastScrollTop = scrollTop;
+})
 
 
 /*=============== SHOW SCROLL UP ===============*/ 

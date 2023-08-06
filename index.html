@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0L3V9VFPT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-T0L3V9VFPT');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Assistent, Uw ICT hulp op locatie!</title>
 
     <!--==================== FAVICON ====================-->
-    <link rel="Shortcut icon" href="assets/Favicon.png">
+    <link rel="Shortcut icon" href="assets/favicon.png">
 
     <!--==================== ICONS ====================-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -17,10 +27,24 @@
     <script src="JS/slider.js" defer></script>
 </head>
 <body>
+    <div class="cookie_container" id="cookie_container">
+        <div class="cookie" id="cookie">
+            <p>Wij gebruiken cookies op onze website om uw ervaring op onze website te optimaliseren. Meer informatie over deze cookies kunt u vinden in ons privacy-en cookiebeleid.</p>
+            <div class="cookie_btn_container">
+                <button class="btn_cookie btn1" id="btn1">
+                    Accepteren
+                </button>
+                <button class="btn_cookie btn2" id="btn2">
+                    Afwijzen
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!--==================== HEADER ====================-->
     <header id="header">
         <div class="header_content">
-            <a href="#" class="logo_box" id="logo_box">
+            <a href="#home" class="logo_box" id="logo_box">
                 <div class="logo_icon" id="logo_icon">
                     <span>JK</span>
                 </div>
@@ -40,19 +64,19 @@
             <nav class="menu" id="menu">
                 <ul class="nav_list" id="nav_list">
                     <li class="link">
-                        <a href="#" id="link1" class="active">
+                        <p id="link1" class="active">
                             Home
                             <span class="link_line"></span>
-                        </a>
+                        </p>
                     </li>
                     <li class="link">
-                        <a href="#" id="link2">
+                        <a href="diensten" id="link2">
                             Diensten
                             <span class="link_line"></span>
                         </a>
                     </li>
                     <li class="link">
-                        <a href="#" id="link3">
+                        <a href="tarieven" id="link3">
                             Tarieven
                             <span class="link_line"></span>
                         </a>
@@ -74,15 +98,18 @@
 
     <main>
         <!--==================== FRONT PAGE ====================-->
-        <section class="section front_page">
+        <section class="section front_page" id="home">
             <div class="dark">
                 <div class="front_page_content">
                     <div class="front_page_1">
                         <h2>
                             Welkom bij
                         </h2>
-                        <h1>
+                        <h1 class="mobile">
                             Smart Assistent
+                        </h1>
+                        <h1 class="desktop">
+                            Smartassistent
                         </h1>
                         <p>
                             Slim, snel en vakkundig, gewoon bij u op locatie.
@@ -92,20 +119,20 @@
                             <a href="#contact" class="front_page_btn">
                                 Contact <i class='bx bxs-right-arrow-alt'></i>
                             </a>
-                            <a href="#" class="front_page_btn">
+                            <a href="hulp-op-afstand" class="front_page_btn">
                                 Hulp op afstand
                             </a>
                         </div>
                     </div>
 
                     <div class="welkom_rechts">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="#fba100" d="M58,-46.8C69.7,-31.5,70.1,-7.7,63.1,11C56.1,29.6,41.7,43.1,23.4,54.1C5.1,65,-17.2,73.4,-33.2,66.6C-49.2,59.7,-59.1,37.7,-64.3,14.8C-69.4,-8.2,-69.8,-32.1,-58.3,-47.3C-46.8,-62.6,-23.4,-69.1,-0.2,-69C23.1,-68.8,46.2,-62.1,58,-46.8Z" transform="translate(100 100)" />
-                        </svg>
+                            <svg viewBox="30 30 140 140" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#fba100" d="M58,-46.8C69.7,-31.5,70.1,-7.7,63.1,11C56.1,29.6,41.7,43.1,23.4,54.1C5.1,65,-17.2,73.4,-33.2,66.6C-49.2,59.7,-59.1,37.7,-64.3,14.8C-69.4,-8.2,-69.8,-32.1,-58.3,-47.3C-46.8,-62.6,-23.4,-69.1,-0.2,-69C23.1,-68.8,46.2,-62.1,58,-46.8Z" transform="translate(100 100)" />
+                            </svg>
     
                         <div class="rechts_content">
                             <h1>
-                                Direct hulp bij
+                                &emsp; Direct hulp bij
                             </h1>
             
                             <p>
@@ -132,15 +159,27 @@
 
         <!--==================== WELKOM ====================-->
         <section class="section welkom" id="Welkom">
+            <h1 class="section_title">
+                Over ons
+            </h1>
             <div class="welkom_container">
                 <div class="welkom_links">
-                    <h1 class="section_title">
-                        Over ons
+                    <h1 class="section_title welkom_title">
+                        Wie zijn wij?
                     </h1>
     
                     <p>
-                        Welkom bij Smart Assistent, uw betrouwbare partner in ICT-oplossingen! Wij zijn een klein maar gedreven ICT-bedrijf dat zich richt op computer- en mobiel onderhoud, netwerkbeheer, software-onderhoud, ict-hulp, printerdiensten en digitale oplossingen. Met onze expertise zorgen we ervoor dat uw systemen altijd probleemloos werken en uw bedrijf efficiënt blijft draaien. Of u nu behoefte heeft aan snelle technische ondersteuning, een professioneel ontwikkelde website of op maat gemaakte digitale oplossingen, wij staan voor u klaar. Bij Smart Assistent streven we naar klanttevredenheid en streven we ernaar om uw ICT-uitdagingen te transformeren in succesverhalen.
+                        Welkom bij Smart Assistent, uw betrouwbare partner in ICT-oplossingen! Wij zijn een klein maar gedreven ICT-bedrijf dat zich richt op ICT hulp aan huis of op locatie, netwerkbeheer, ICT ondersteuning, hardware en software onderhoud en digitale oplossingen. Met onze expertise zorgen we ervoor dat uw systemen altijd probleemloos werken en uw bedrijf efficiënt blijft draaien.
                     </p>
+                    <div style="width: 100%;">
+                        <a href="#contact" class="welkom_btn">
+                            Contact <i class='bx bxs-right-arrow-alt'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="welkom_rechts2">
+                    <img src="assets/welkom_foto.jpg">
                 </div>
             </div>
         </section>
@@ -160,10 +199,10 @@
                         Hardware Onderhoud
                     </h2>
                     <p>
-                        Houd uw computers, telefoons, tablets en andere elektronische apparaten in topconditie met onze onderhouds service. Profiteer van een computer APK, kleine reparaties en upgrades voor optimale prestaties en duurzaamheid. Of u nou last heeft van een kapotte accu, een defect beeldscherm of een pc die niet meer aan gaat, geen enkel probleem, wij fixen het! 
+                        Houd uw computers, telefoons, tablets en andere elektronische apparaten in topconditie met onze onderhouds service. Profiteer van een computer APK, kleine reparaties en upgrades voor optimale prestaties en duurzaamheid. Of u nou last heeft van een...
                     </p>
                     <div class="btn_container">
-                        <a href="#" class="btn_diensten">
+                        <a href="diensten" class="btn_diensten">
                             Lees meer
                         </a>
                     </div>
@@ -177,10 +216,10 @@
                         Software Onderhoud
                     </h2>
                     <p>
-                        Wij van Smart Assistent geloven we dat het onderhouden van software van cruciaal belang is voor het soepele functioneren van elk digitaal systeem. Of u nu een klein bedrijf of een grote onderneming bent, goed onderhoud van uw software is essentieel om ervoor te zorgen dat uw digitale oplossingen veilig, betrouwbaar en up-to-date blijven.
+                        Wij van Smart Assistent geloven we dat het onderhouden van software van cruciaal belang is voor het soepele functioneren van elk digitaal systeem. Of u nu een klein bedrijf of een grote onderneming bent, goed onderhoud van uw software is essentieel om...
                     </p>
                     <div class="btn_container">
-                        <a href="#" class="btn_diensten">
+                        <a href="diensten" class="btn_diensten">
                             Lees meer
                         </a>
                     </div>
@@ -194,10 +233,10 @@
                         Netwerkbeheer
                     </h2>
                     <p>
-                        Vandaag de dag bent u nergens zonder internet. Het onderhouden van uw netwerk is daarom essentieel om ervoor te zorgen dat u uw online zaken kunt regelen, medewerkers productief kunnen werken, klanten tevreden zijn en de algehele bedrijfscontinuïteit gewaarborgd blijft. Wilt u zich hier niet druk over hoeven te maken? Kies dan voor Smart Assistent!
+                        Vandaag de dag bent u nergens zonder internet. Het onderhouden van uw netwerk is daarom essentieel om ervoor te zorgen dat u uw online zaken kunt regelen, medewerkers productief kunnen werken, klanten tevreden zijn en de algehele bedrijfscontinuïteit...
                     </p>
                     <div class="btn_container">
-                        <a href="#" class="btn_diensten">
+                        <a href="diensten" class="btn_diensten">
                             Lees meer
                         </a>
                     </div>
@@ -208,13 +247,13 @@
 
                     </div>
                     <h2>
-                        Website's bouwen
+                        Websites bouwen
                     </h2>
                     <p>
-                        Vandaag de dag bent u nergens zonder internet. Het onderhouden van uw netwerk is daarom essentieel om ervoor te zorgen dat u uw online zaken kunt regelen, medewerkers productief kunnen werken, klanten tevreden zijn en de algehele bedrijfscontinuïteit gewaarborgd blijft. Wilt u zich hier niet druk over hoeven te maken? Kies dan voor Smart Assistent!
+                        Heeft u een op maat gemaakte website nodig? Wij weten maar al te goed hoe veel werk het is om een gepersonalisseerde website te bouwen. Daarom begrijpen we ook dat u die tijd beter in andere zaken kunt steken. Of u nou een one-page pagina nodig...
                     </p>
                     <div class="btn_container">
-                        <a href="#" class="btn_diensten">
+                        <a href="diensten" class="btn_diensten">
                             Lees meer
                         </a>
                     </div>
@@ -228,10 +267,10 @@
                         Computer APK
                     </h2>
                     <p>
-                        Vandaag de dag bent u nergens zonder internet. Het onderhouden van uw netwerk is daarom essentieel om ervoor te zorgen dat u uw online zaken kunt regelen, medewerkers productief kunnen werken, klanten tevreden zijn en de algehele bedrijfscontinuïteit gewaarborgd blijft. Wilt u zich hier niet druk over hoeven te maken? Kies dan voor Smart Assistent!
+                        Last van een vertraagde computer? Of maakt uw computer teveel geluid? Met onze Computer APK service krijgt u uw computer weer terug als nieuw. Wij verwijderen al het stof en vettigheid, vervangen de koelpasta en verwijderen alle ongewenste programma's...
                     </p>
                     <div class="btn_container">
-                        <a href="#" class="btn_diensten">
+                        <a href="diensten" class="btn_diensten">
                             Lees meer
                         </a>
                     </div>
@@ -245,10 +284,10 @@
                         Printers
                     </h2>
                     <p>
-                        Vandaag de dag bent u nergens zonder internet. Het onderhouden van uw netwerk is daarom essentieel om ervoor te zorgen dat u uw online zaken kunt regelen, medewerkers productief kunnen werken, klanten tevreden zijn en de algehele bedrijfscontinuïteit gewaarborgd blijft. Wilt u zich hier niet druk over hoeven te maken? Kies dan voor Smart Assistent!
+                        Ook voor alle soorten en maten printers kunt u bij ons terrecht. Wij regelen alles van de printer tot aan de inkt. Ook de connectie met uw netwerk of computer regelen wij. Door het onderhoud door ons uit te laten voeren gaat u printer extra lang mee. Of...
                     </p>
                     <div class="btn_container">
-                        <a href="#" class="btn_diensten">
+                        <a href="diensten" class="btn_diensten">
                             Lees meer
                         </a>
                     </div>
@@ -298,7 +337,7 @@
                 </li>
                 <li class="item">
                     <a href="https://www.ui.com/" target="_blank">
-                        <img src="assets/ubnt-logo.png" alt="ubnt" draggable="false">
+                        <img class="logo_img" src="assets/ubnt-logo.png" alt="ubnt" draggable="false">
                     </a>
                 </li>
             </ul>
@@ -321,7 +360,7 @@
                         Computers
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium error architecto ut a, voluptatem cupiditate nihil odio, expedita autem similique eaque necessitatibus in asperiores officiis cumque saepe, tempore quo.
+                        Wanneer u te maken krijgt met problemen op uw computer, kan het erg frustrerend en tijdrovend zijn om het probleem zelf op te lossen. Hier komt Smart Assistent goed van pas. Onze uitgebreide service heeft een oplossing voor ieder probleem!
                     </p>
                     <div class="checklist">
                         <i class='bx bx-check'></i> Computer APK <br>
@@ -340,7 +379,7 @@
                         Mobiel & Tablets
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium error architecto ut a, voluptatem cupiditate nihil odio, expedita autem similique eaque necessitatibus in asperiores officiis cumque saepe, tempore quo.
+                        Ook bij problemen met je telefoon of tablet geld het zelfde. Geen probleem is voor ons te gek. Met onze ICT hulp aan huis of bij uw bedrijf is het zo geregeld. Wij hebben overal een duurzame oplossing voor. Slim, snel en vakkundig, gewoon bij u op locatie.
                     </p>
                     <div class="checklist">
                         <i class='bx bx-check'></i> Reiniging <br>
@@ -359,7 +398,7 @@
                         Al uw apparaten
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium error architecto ut a, voluptatem cupiditate nihil odio, expedita autem similique eaque necessitatibus in asperiores officiis cumque saepe, tempore quo.
+                        Wij zijn van alle markten thuis. Heeft u een betere WiFi verbinding nodig? Een sterker signaal of een grotere dekking? Wij van Smart Assistent hebben de oplossing voor al uw slimme apparaten. U kunt natuurlijk ook voor advies op maat bij ons terrecht. 
                     </p>
                     <div class="checklist">
                         <i class='bx bx-check'></i> Installatie <br>
@@ -376,20 +415,35 @@
         </section>
 
 
+        <!--==================== REVIEUWS =====================-->
+        <section class="section section_revieuws">
+            <h1 class="section_title">
+                Klant ervaringen
+            </h1>
+            <div class="reviews">
+                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core></script>
+                <div class="elfsight-app-f4a4ab6a-bbad-4052-b069-c37ab7e2d258 review_box"></div>
+            </div>
+        </section>
+
+
         <!--==================== CONTACT ====================-->
         <section class="section" id="contact">
+            <h1 class="section_title">
+                Contact
+            </h1>
             <div class="contact_container">
                 <h1 class="section_title">
-                    Contact
+                    Kom met ons in contact!
                 </h1>
 
                 <p>
                     Wilt u een afspraak maken of heeft u een vraag? Stuur ons een bericht! We zijn natuurlijk ook telefonisch bereikbaar. Bellen kan van maandag tot en met vrijdag tussen 10:00 en 20:00. Voor spoed zijn wij ook in het weekend bereikbaar tussen 10:00 en 20:00.
                 </p>
-                <p>
-                    Tel: <a href="tel:0575228003">0575-228003</a> <br> Email: <a href="mailto: info@smartassistent.nl">info@smartassistent.nl</a>
-                </p>
     
+                <h2 class="contacth2">
+                    Contact formulier
+                </h2>
                 <form action="" class="contact_form" id="contact-form">
                     <div class="contact_group">
                         <input type="text" name="user_name" required placeholder="Naam" class="contact__input">
@@ -397,7 +451,7 @@
                         <input type="tel" name="user_tel" required placeholder="Telefoonnummer" class="contact__input">
                     </div>
          
-                    <textarea name="user_project" required placeholder="Je bericht" class="contact__input"></textarea>
+                    <textarea name="user_project" required placeholder="Bericht" class="contact__input"></textarea>
                        
                     <p class="contact_message" id="contact-message"></p>
                     
@@ -405,12 +459,41 @@
                         Verzenden
                     </button>
                 </form>
+
+                <h1 class="section_title">
+                    Adres & Gegevens
+                </h1>
+                <div>
+                    <div>
+                        <div class="locatie">
+                            <div class="flex">
+                                <h2>
+                                    Adres
+                                </h2>
+                                <p>Straat & nummer: <a href="https://maps.google.com/maps/dir//Marktplein+12+6971+AB+Brummen/@52.0881399,6.1571776,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x47c796f14f590bed:0xe2fe144afec3daa3">Marktplein 12</a><br>Postcode & woonplaats: 6971 AB Brummen</p>
+                            </div>
+                            <div class="flex">
+                                <h2>
+                                    Bank en KvK
+                                </h2>
+                                <p>Bank: NL12 INGB 0709 6155 58<br>BTW: NL004391285B91<br>KvK nr: 87305100</p>
+                            </div>
+                            <div class="flex">
+                                <h2>
+                                    Contactgegevens
+                                </h2>
+                                Tel: <a href="tel:0575228003">0575-228003</a> <br> Email: <a href="mailto: info@smartassistent.nl">info@smartassistent.nl</a>
+                            </div>
+                        </div>
+                        <iframe class="locatie_frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.5379859046275!2d6.154597312597848!3d52.08813987183417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c796f14f590bed%3A0xe2fe144afec3daa3!2sMarktplein%2012%2C%206971%20AB%20Brummen!5e0!3m2!1snl!2snl!4v1691236504802!5m2!1snl!2snl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!--==================== CONTACT ====================-->
+        <!--==================== FOOTER ====================-->
         <section class="footer">
-            <a href="#" class="logo_box_footer" id="logo_box">
+            <a href="#home" class="logo_box_footer" id="logo_box">
                 <div class="logo_icon_footer" id="logo_icon">
                     <span>JK</span>
                 </div>
@@ -476,5 +559,7 @@
 
 
     <script src="JS/main.js"></script>
+    <script src="JS/emailjs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>

@@ -85,10 +85,7 @@ const infiniteScroll = () => {
     }
 }
 
-lijst.addEventListener("mousemove", dragging);
-lijst.addEventListener("mousedown", dragStart);
 lijst.addEventListener("touchstart", touchStart);
-document.addEventListener("mouseup", dragStop);
 document.addEventListener("touchend", dragStop);
 lijst.addEventListener("scroll", infiniteScroll);
 
